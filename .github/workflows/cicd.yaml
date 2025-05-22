@@ -85,5 +85,6 @@ jobs:
         git config --global user.email "vedantjpatel124@gmail.com"
         git config --global user.name "Vedant Patel"
         git add helm/go-web-app-chart/values.yaml
-        git commit -m "Update tag in Helm chart"
-        git push
+        git commit -m "Update tag in Helm chart" || echo "No changes to commit"
+        git pull --rebase origin main
+        git push origin main
